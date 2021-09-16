@@ -33,4 +33,8 @@ class UpdateWorkspaceRequest < WorkspaceRequest
   def success?
     @response.code == 204
   end
+
+  def unprocessable?
+    @response.code == 422
+  end
 end
